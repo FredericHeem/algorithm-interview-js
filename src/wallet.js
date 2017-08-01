@@ -1,5 +1,3 @@
-const coins = [1, 3, 6];
-
 export default function Wallet() {
   let coins = [];
   function totals() {

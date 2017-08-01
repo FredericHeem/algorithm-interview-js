@@ -1,5 +1,5 @@
 import assert from "assert";
-import Wallet from "./problem";
+import Wallet from "./wallet";
 
 const coins = [1, 100, 200, 200, 1000, 1];
 
@@ -10,13 +10,13 @@ it("add one", () => {
   assert.equal(wallet.totals(), 2);
 });
 
-it("sample 1", () => {
+it("add all", () => {
   const wallet = Wallet();
   
   coins.forEach(coin => wallet.add(coin));
   assert.equal(wallet.totals(), 1502);
 });
-it.only("spend", () => {
+it("spend", () => {
   const wallet = Wallet();
   coins.forEach(coin => wallet.add(coin));
   wallet.display();
